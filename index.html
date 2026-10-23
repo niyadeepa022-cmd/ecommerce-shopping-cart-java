@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartify | Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Cartify<span>.</span></a>
+
+        <div class="nav-actions">
+            <a href="#products">Products</a>
+            <button class="cart-button" id="cartButton">
+                🛒 Cart <span id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR EVERYDAY SHOPPING DESTINATION</p>
+                <h1>Everything you love,<br>all in one <span>place.</span></h1>
+                <p class="hero-description">
+                    Discover great products, add your favourites to the cart,
+                    and enjoy a simple shopping experience.
+                </p>
+                <a href="#products" class="primary-button">Explore Products →</a>
+            </div>
+            <div class="hero-art">🛍️</div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <span>🚚</span>
+                <div><strong>Easy Delivery</strong><small>Simple delivery charges</small></div>
+            </div>
+            <div class="feature">
+                <span>🔒</span>
+                <div><strong>Simple Checkout</strong><small>Easy order summary</small></div>
+            </div>
+            <div class="feature">
+                <span>💚</span>
+                <div><strong>Smart Shopping</strong><small>Track recently viewed items</small></div>
+            </div>
+        </section>
+
+        <section class="shop-section" id="products">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OUR COLLECTION</p>
+                    <h2>Explore Products</h2>
+                    <p class="muted">Find something you'll love.</p>
+                </div>
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="search" id="searchInput"
+                           placeholder="Search products..." aria-label="Search products">
+                </div>
+            </div>
+
+            <div class="category-filters" id="categoryFilters">
+                <button class="filter-button active" data-category="All">All Products</button>
+                <button class="filter-button" data-category="Electronics">Electronics</button>
+                <button class="filter-button" data-category="Fashion">Fashion</button>
+                <button class="filter-button" data-category="Home">Home</button>
+                <button class="filter-button" data-category="Accessories">Accessories</button>
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+            <p class="empty-message hidden" id="noProducts">No matching products found.</p>
+        </section>
+
+        <section class="lower-section">
+            <div class="cart-panel" id="cart">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">YOUR SELECTION</p>
+                        <h2>Shopping Cart <span id="cartItemLabel">(0 items)</span></h2>
+                    </div>
+                    <button class="text-button" id="clearCartButton">Clear cart</button>
+                </div>
+
+                <div id="cartItems" class="cart-items"></div>
+
+                <div id="emptyCart" class="empty-state">
+                    <span>🛒</span>
+                    <p>Your cart is empty.</p>
+                    <small>Add some products to get started!</small>
+                </div>
+
+                <div class="bill">
+                    <div><span>Subtotal</span><strong id="subtotal">₹0.00</strong></div>
+                    <div><span>Delivery charge</span><strong id="deliveryCharge">₹0.00</strong></div>
+                    <div class="bill-total"><span>Total</span><strong id="grandTotal">₹0.00</strong></div>
+                    <p class="delivery-note" id="deliveryNote">Add products to your cart to begin.</p>
+                    <button class="checkout-button" id="checkoutButton">Proceed to Checkout →</button>
+                </div>
+            </div>
+
+            <aside class="recent-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">YOUR BROWSING HISTORY</p>
+                        <h2>Recently Viewed</h2>
+                    </div>
+                    <button class="text-button" id="clearHistoryButton">Clear</button>
+                </div>
+                <p class="muted">Your five most recently viewed products.</p>
+                <div id="recentItems" class="recent-items"></div>
+                <div id="emptyHistory" class="empty-state compact">
+                    <span>👀</span>
+                    <p>No products viewed yet.</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">Cartify<span>.</span></a>
+        <p>A student project demonstrating shopping cart operations and data management.</p>
+        <small>Demo website · No real payments are processed.</small>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
