@@ -1,130 +1,130 @@
 # ecommerce-shopping-cart-java
 E-Commerce Shopping Cart using Java and Data Structures
-# PROJECT DESCRIPTION
-## E-Commerce Shopping Cart and Recently Viewed Products Engine Using Java Data Structures
 
-### 1. Introduction
-1. The **E-Commerce Shopping Cart and Recently Viewed Products Engine** is a Java-based application developed to demonstrate the practical use of data structures in online shopping systems.
-2. The main purpose of this project is to manage products, maintain a shopping cart, calculate the total price, and track recently viewed products efficiently.
-3. The project uses Java programming concepts and built-in collection classes to store, retrieve, and manage product information.
-4. The system can be operated through a menu-driven console interface, allowing users to perform different shopping operations.
+## 1. Project Overview
+- This project is an **E-Commerce Shopping Cart and Recently Viewed Products Engine** developed using Java and fundamental data structures.
+- It simulates the basic operations of an online shopping application, allowing users to manage shopping cart items, update product quantities, calculate checkout totals, and track recently viewed products.
+- The project also includes a web-based shopping interface named **Cartify**, developed using HTML, CSS, and JavaScript.
+- The main objective is to demonstrate how data structures can be applied to solve real-world problems in e-commerce applications.
 
-### 2. Objectives of the Project
-1. To understand the practical application of data structures in e-commerce systems.
-2. To allow users to view available products and search for products.
-3. To provide options to add products to a shopping cart, update quantities, and remove items.
-4. To maintain a history of recently viewed products.
-5. To calculate the subtotal, delivery charge, and final payable amount.
-6. To demonstrate how Java Collections Framework classes simplify data management.
+## 2. Objectives of the Project
+- To implement shopping cart operations using Java.
+- To understand the practical applications of linear and hash-based data structures.
+- To maintain a recently viewed products history efficiently.
+- To prevent duplicate entries where required.
+- To calculate product prices, quantities, and checkout totals.
+- To develop a user-friendly shopping website for demonstrating e-commerce features.
+- To understand the relationship between data structures and real-world software applications.
 
-### 3. Data Structures Used
+## 3. Data Structures Used
 
-**1. ArrayDeque**
+### a) ArrayDeque
 - `ArrayDeque` is used to maintain the recently viewed products history.
-- It supports efficient insertion and removal of elements at both ends.
-- When a product is viewed, it is added to the beginning of the history.
-- The history is limited to a fixed number of products, such as the five most recently viewed items.
-- This helps users quickly revisit products they have already explored.
+- It acts as a stack, following the **Last-In, First-Out (LIFO)** principle.
+- Whenever a product is viewed, it is placed at the top of the history.
+- The project maintains a maximum of five recently viewed products, removing older entries when necessary.
+- It provides efficient insertion and removal operations at the ends.
 
-**2. HashSet**
-- `HashSet` stores unique product tags or categories.
-- It automatically prevents duplicate entries.
-- For example, tags such as Electronics, Fashion, and Accessories can be stored without repetition.
-- It provides efficient average-time lookup for checking whether a tag exists.
+### b) HashSet
+- `HashSet` is used to store product search tags and prevent duplicate entries.
+- It supports efficient average-case search, insertion, and deletion operations, generally taking O(1) time.
+- This helps demonstrate how hash-based data structures improve lookup efficiency.
+- Note: HashSet does not maintain elements in a guaranteed order.
 
-**3. HashMap**
-- `HashMap` can be used to associate product IDs with product details or to manage cart quantities.
-- It stores information in key-value pairs.
-- For example, a product ID can act as a key, while the corresponding product or quantity acts as its value.
-- It supports efficient average-time insertion, searching, updating, and removal by key.
-- If the implementation uses a different collection for cart management, this description should be adjusted to match the actual code.
+### c) ArrayDeque and HashSet in Practical Applications
+- These collections demonstrate how data structures can manage browsing history and product-related information efficiently.
+- They reduce the need for complicated manual data management and make the application easier to maintain.
 
-**4. ArrayList**
-- `ArrayList` can be used to store the available products in the product catalogue.
-- It allows products to be maintained in an ordered collection.
-- The program can iterate through the list to display products or search for matching items.
-- If the actual Java program uses another collection for the catalogue, mention that collection instead.
+### d) Arrays and Lists
+- Arrays and list-based collections can be used to store product information and maintain shopping cart entries, depending on the implementation.
+- They allow the program to access product details and process cart items during calculations.
+- The exact collection used for the cart should be identified from the Java source code.
 
-### 4. Main Components and Features
-1. **Product Catalogue:** Displays the available products along with their names, prices, and other details.
-2. **Product Search:** Allows users to find products using relevant names, categories, or tags.
-3. **Shopping Cart Management:** Supports adding products, increasing or decreasing quantities, and removing items.
-4. **Recently Viewed Products:** Maintains a limited history of the products viewed by the user.
-5. **Price Calculation:** Calculates the subtotal based on product prices and quantities.
-6. **Delivery Charge Calculation:** Applies the delivery charge according to the project's predefined rules.
-7. **Checkout:** Displays the final order amount and simulates the checkout process.
-8. **Data Persistence:** If local storage or file storage is implemented, cart details or viewing history can be retained between sessions. Otherwise, the data may reset when the program ends.
+## 4. Main Features
+- **Product Management:** Displays products with names, categories, descriptions, and prices.
+- **Add to Cart:** Allows users to add products to the shopping cart.
+- **Quantity Management:** Increases or decreases the quantity of selected products.
+- **Remove Items:** Removes individual products or clears the entire cart.
+- **Price Calculation:** Calculates the subtotal, delivery charges, and final amount.
+- **Recently Viewed Products:** Displays the five most recently viewed products.
+- **Search and Filtering:** Enables product searches and filtering by categories.
+- **Data Persistence:** The website uses browser local storage to retain cart items and browsing history.
+- **Checkout Simulation:** Displays an order summary and simulates order confirmation without collecting real payments.
 
-### 5. Working Principle
-1. The application starts by displaying a menu or the available products.
-2. The user selects a product to view its details.
-3. The selected product is added to the recently viewed history.
-4. The user can add the product to the shopping cart and specify the required quantity.
-5. The application updates the cart whenever an item is added, removed, or modified.
-6. The total price is calculated using the product prices and quantities.
-7. At checkout, the subtotal and applicable delivery charge are used to calculate the final amount.
-8. The program displays the order summary to the user.
+## 5. Technologies Used
+- **Java:** Implements the command-line application and demonstrates data structures.
+- **Java Collections Framework:** Provides collections such as ArrayDeque and HashSet.
+- **HTML5:** Structures the shopping website.
+- **CSS3:** Provides styling, layout, and responsive design.
+- **JavaScript:** Implements product search, cart operations, price calculations, and recently viewed history.
+- **Browser Local Storage:** Saves website cart and browsing-history data locally.
+- **Git and GitHub:** Used for source-code management and project hosting.
 
-### 6. Software and Requirements
-1. **Programming Language:** Java.
-2. **JDK:** Java Development Kit must be installed to compile and run the program.
-3. **Code Editor:** Notepad, Visual Studio Code, IntelliJ IDEA, Eclipse, or another Java-compatible editor.
-4. **Execution Environment:** Command Prompt or the terminal in an IDE.
-5. **Data Structure Library:** Java Collections Framework, which includes classes such as `ArrayDeque`, `HashSet`, `HashMap`, and `ArrayList`.
+## 6. Software Requirements
+- Java Development Kit (JDK) installed on the computer.
+- A text editor or Java IDE, such as Notepad, VS Code, IntelliJ IDEA, or Eclipse.
+- A modern web browser such as Chrome, Edge, or Firefox.
+- A GitHub account for hosting the project repository.
+- No external database or Java framework is required for the Java application described in the project abstract.
 
-### 7. How to Compile and Run the Java Program
+## 7. How to Compile and Run the Java Program
 
-**Step 1: Install the JDK**
-- Install a suitable JDK version on the computer.
-- Open Command Prompt and enter:
-  `java -version`
-- Then enter:
-  `javac -version`
-- If both commands display version information, Java is available in the terminal.
+1. Install the JDK and verify that Java is available by opening Command Prompt or a terminal.
+2. Execute the following commands to check the installation:
 
-**Step 2: Save the Java Code**
-- Open Notepad or another code editor.
-- Paste the complete Java program.
-- Save the file using the filename `Main.java`.
-- Ensure that the public class name in the code is `Main`.
+   ```bash
+   java -version
+   javac -version
+   ```
 
-**Step 3: Open the Program Folder**
-- Open Command Prompt.
-- Navigate to the folder where `Main.java` is saved using the `cd` command.
+3. Save the Java source code in a file whose name matches its public class name. For example, if the public class is `ShoppingCart`, save it as `ShoppingCart.java`.
+4. Open Command Prompt or a terminal in the folder containing the Java file.
+5. Compile the program using:
 
-**Step 4: Compile the Program**
-- Enter the following command:
-  `javac Main.java`
-- If compilation succeeds, a `Main.class` file will be generated, along with other class files if the program contains additional classes.
-- If an error appears, check the spelling, brackets, semicolons, and class names.
+   ```bash
+   javac ShoppingCart.java
+   ```
 
-**Step 5: Run the Program**
-- Enter:
-  `java Main`
-- The program will start, and the user can interact with the application through the displayed menu.
+6. If compilation succeeds, execute the program using:
 
-### 8. Advantages
-1. Demonstrates real-world applications of Java data structures.
-2. Organizes shopping cart and product information efficiently.
-3. Reduces duplicate entries when using `HashSet`.
-4. Supports convenient access to recently viewed products.
-5. Makes price calculation and cart updates easier to manage.
-6. Provides a foundation for developing larger e-commerce applications.
+   ```bash
+   java ShoppingCart
+   ```
 
-### 9. Limitations
-1. The basic version may use a predefined product catalogue.
-2. A console-based version does not provide a graphical user interface.
-3. Checkout is simulated and does not process real payments.
-4. Without a database or suitable persistence mechanism, order information may not be permanently stored.
-5. The application does not necessarily include user accounts, authentication, or live inventory updates.
+7. Follow the instructions displayed in the command-line interface to test the available shopping cart and recently viewed products operations.
 
-### 10. Future Enhancements
-1. Connect the application to a database such as MySQL.
-2. Develop a graphical interface or web-based front end.
-3. Add user registration and login.
-4. Implement real inventory management.
-5. Add secure payment gateway integration.
-6. Generate order receipts and maintain purchase history.
+**Important:** Replace `ShoppingCart` with the actual public class name in your Java source file. If the source code uses a package, compile and run it using the appropriate package structure.
 
-### 11. Conclusion
-The E-Commerce Shopping Cart and Recently Viewed Products Engine demonstrates how data structures can be applied to solve common problems in online shopping systems. Collections such as `ArrayDeque`, `HashSet`, `HashMap`, and `ArrayList` help organize product information, manage cart operations, and maintain viewing history. The project strengthens understanding of Java programming, object-oriented design, and collection handling. It also provides a foundation for developing more advanced e-commerce applications with databases, graphical interfaces, and secure payment facilities.
+## 8. How to Run the Website
+
+1. Download or clone the GitHub repository to your computer.
+2. Ensure that `index.html`, `style.css`, and `script.js` are located in the same project folder.
+3. Open `index.html` in a web browser.
+4. Browse the products, use the search and category filters, and add products to the cart.
+5. Test quantity changes, item removal, delivery calculations, checkout simulation, and recently viewed products.
+6. Refresh the page to verify whether the browser has retained the saved cart and browsing history.
+
+## 9. Expected Output
+- The Java program provides a command-line simulation of e-commerce shopping cart operations, according to its implemented menu and functionality.
+- The website displays a shopping interface containing products, a shopping cart, a price summary, and recently viewed products.
+- Users can interact with the website and observe changes in product quantities, totals, and browsing history.
+- Checkout is simulated for demonstration purposes; no real payment is processed.
+
+## 10. Applications of the Project
+- Demonstrates the use of data structures in e-commerce systems.
+- Helps students understand stack operations, hashing, and collection management.
+- Provides a basic model for shopping cart and browsing-history functionality.
+- Can serve as a foundation for developing more advanced online shopping applications.
+- Supports practical learning in Java programming, web development, and algorithmic problem-solving.
+
+## 11. Limitations and Future Enhancements
+- The project is a demonstration system and does not process real transactions.
+- It does not include a real payment gateway, user authentication, or database-backed order management.
+- The website stores information in the browser rather than a central database.
+- Future versions could include user accounts, database integration, product recommendations, order tracking, inventory management, and secure payment processing.
+
+## 12. Conclusion
+- The E-Commerce Shopping Cart and Recently Viewed Products Engine demonstrates how fundamental data structures can support essential online shopping operations.
+- ArrayDeque provides an efficient way to manage a limited browsing history, while HashSet demonstrates duplicate prevention and efficient hash-based lookups.
+- The accompanying Cartify website provides an interactive interface for exploring products and testing shopping cart functionality.
+- Overall, the project connects core Java concepts with practical web development and provides a useful foundation for understanding the design of modern e-commerce applications.
